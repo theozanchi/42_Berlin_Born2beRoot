@@ -98,10 +98,25 @@ Restart OpenSSH to enable config
 ```
 sudo systemctl restart ssh
 ```
-Check IP address of the VM (10.0.2.15 in my case)
+Redirect host port to the correct port:
+In VirtualBox go to:
+born2beroot >> Settings >> Network >> Adapter1 >> Advanced >> Port Forwarding
+Add a rule: Host port 4242 and guest port 4242
+
+Restart OpenSSH to enable config
 ```
-ip a
+sudo systemctl restart ssh
 ```
 
 Try to connect from the host, with the user `tzanchi`
+```
+ssh tzanchi@localhost -p 4242
+```
+Logout with the `logout` command
+```
+logout
+```
+Check that login is impossible from root 
+```
+ssh root@localhost -p 4242
 ```
