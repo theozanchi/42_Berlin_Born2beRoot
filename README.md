@@ -100,7 +100,7 @@ sudo systemctl restart ssh
 ```
 Redirect host port to the correct port:
 In VirtualBox go to:
-born2beroot >> Settings >> Network >> Adapter1 >> Advanced >> Port Forwarding
+**born2beroot** >> **Settings** >> **Network** >> **Adapter1** >> **Advanced** >> **Port Forwarding**
 Add a rule: Host port 4242 and guest port 4242
 
 Restart OpenSSH to enable config
