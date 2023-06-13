@@ -44,6 +44,7 @@ Defaults  logfile="/var/log/sudo/sudo.log" #Input logs storage file
 Defaults  log_output #Output logs enabled
 Defaults  iolog_dir="/var/log/sudo" #Putput logs storage file
 Defaults  requiretty #A console is required to use sudo
+Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
 
 Install additional tools that I like: FISH and VIM
