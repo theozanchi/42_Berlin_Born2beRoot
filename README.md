@@ -17,7 +17,7 @@ apt upgrade
 apt install sudo
 ```
 Add user to `sudo` group
-```Requiretty exige une console pour utiliser sudo
+```
 sudo usermod -aG sudo tzanchi
 ```
 Return to previous session and then exit again to be able to re login
@@ -51,6 +51,7 @@ Install additional tools that I like: FISH and VIM
 apt update
 apt upgrade
 sudo apt install fish
+
 apt update
 apt upgrade
 sudo apt install vim
