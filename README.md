@@ -1,10 +1,10 @@
-# Born2beRoot
+# Installation
 
-## Installation
+*TBC*
 
-## Configuration
+# Configuration
 
-### Install `sudo`
+## Install `sudo`
 
 Switch to `root` user
 ```
@@ -61,7 +61,7 @@ Switch to FISH
 fish
 ```
 
-### Install and enable firewall
+## Install and enable firewall
 ```
 sudo apt install ufw
 sudo ufw enable
@@ -75,7 +75,7 @@ Check firewall status (`verbose` is optional)
 sudo ufw status verbose
 ```
 
-### Install and configure OpenSSH
+## Install and configure OpenSSH
 ```
 sudo apt update
 sudo apt upgrade
@@ -125,4 +125,49 @@ logout
 Check that login is impossible from root 
 ```
 ssh root@<IP Address> -p 4242
+```
+
+## Implement password policy
+Edit the `/etc/login.defs` file:
+```
+sudo vim /etc/login.defs
+```
+And edit the following lines to comply with the subject:
+```
+PASS_MAX_DAYS  30
+PASS_MIN_DAYS  2
+PASS_WARN_AGE  7
+```
+Apply manually the changes to the two current users as it is not automatically done:
+```
+sudo chage -M 30 tzanchi
+sudo chage -M 30 root
+sudo chage -m 2 tzanchi
+sudo chage -m 2 root
+sudo chage -W 7 tzanchi
+sudo chage -W 7 tzanchi
+```
+`sudo chage -l tzanchi` and `sudo chage -l root` can be used to check the two users
+
+Install a package to enforce password security 
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install libpam-pwquality
+```
+Then edit the configuration file:
+```
+sudo vim /etc/security/pwquality.conf
+```
+The following lines in the configuration file should be as follow:
+```
+difok = 1
+minlen = 10
+dcredit = -1
+ucredit = -1
+lcredit = -1
+maxrepeat = 3
+usercheck = 1
+retry = 3
+enforce_for_root
 ```
