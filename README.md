@@ -172,3 +172,22 @@ usercheck = 1
 retry = 3
 enforce_for_root
 ```
+
+## Create a monitoring script
+Write the `monitoring.sh` script and place it at `/usr/local/bin`
+Give it execution permissions
+```
+sudo chmod 755 monitoring.sh
+```
+Enable cron
+```
+sudo systemctl enable cron
+```
+Star a crontab file for root
+```
+sudo crontab -e
+```
+Add a job like this
+```
+*/10 * * * * bash /usr/local/bin/monitoring.sh
+```
