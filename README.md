@@ -49,7 +49,7 @@ Defaults  requiretty #A console is required to use sudo
 Install additional tools that I like: FISH and VIM
 ```
 apt update
-aptupgrade
+apt upgrade
 sudo apt install fish
 apt update
 apt upgrade
