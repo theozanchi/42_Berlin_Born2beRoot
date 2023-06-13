@@ -162,6 +162,7 @@ sudo vim /etc/security/pwquality.conf
 ```
 The following lines in the configuration file should be as follow:
 ```
+difok = 7
 minlen = 10
 dcredit = -1
 ucredit = -1
