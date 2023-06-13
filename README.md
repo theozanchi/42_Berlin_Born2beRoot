@@ -103,19 +103,20 @@ Restart OpenSSH to enable config
 ```
 sudo systemctl restart ssh
 ```
-Redirect host port to the correct port:
+Change network adapter:
 In VirtualBox go to:
-**born2beroot** >> **Settings** >> **Network** >> **Adapter1** >> **Advanced** >> **Port Forwarding**
-Add a rule: Host port 4242 and guest port 4242
+**born2beroot** >> **Settings** >> **Network** >> **Adapter1**
+Select **Attached to** Bridge Adapter
 
-Restart OpenSSH to enable config
+Restart OpenSSH to enable config and get guest IP address
 ```
 sudo systemctl restart ssh
+ip a
 ```
 
-Try to connect from the host, with the user `tzanchi`
+Try to connect from the host, with the user `tzanchi` (`10.15.248.0` in my case)
 ```
-ssh tzanchi@localhost -p 4242
+ssh tzanchi@<IP Address> -p 4242
 ```
 Logout with the `logout` command
 ```
@@ -123,5 +124,5 @@ logout
 ```
 Check that login is impossible from root 
 ```
-ssh root@localhost -p 4242
+ssh root@<IP Address> -p 4242
 ```
