@@ -179,7 +179,7 @@ sudo passwd tzanchi
 ```
 
 ## Create a monitoring script
-Write the `monitoring.sh` script and place it at `/usr/local/bin`
+Write the [`monitoring.sh`](https://github.com/theozanchi/42_Berlin_Born2beRoot/blob/main/monitoring.sh) script and place it at `/usr/local/bin`
 Give it execution permissions
 ```
 sudo chmod 755 monitoring.sh
