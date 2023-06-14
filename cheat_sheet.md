@@ -1,6 +1,6 @@
 ## Miscellaneous
-* `su <username> : switch user
-* `passwd <username> : change password
+* `su <username>` : switch user
+* `passwd <username>` : change password
 
 ## Users
 * `adduser <username>` : creates a new user
