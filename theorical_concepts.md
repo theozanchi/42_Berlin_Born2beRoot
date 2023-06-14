@@ -38,13 +38,13 @@ VM stands for Logical Volume Management. It is a system of managing logical volu
 
 Here’s why LVM is used and what benefits it brings:
 
-1. Flexibility in Managing Storage: With LVM, you can create logical partitions that can span across multiple physical disks. This is useful in situations where a partition might run out of space, and you need to add more without going through the hassle of reformatting disks.
-2. Easy to Resize Partitions: You can quickly and easily resize logical volumes, even while they are in use. This means that if a particular partition needs more or less space, you can resize it without any downtime
-3. Snapshots: LVM allows you to create snapshots of your logical volumes. This means that you can create an exact copy of a volume's contents at a particular point in time. This is extremely useful for backups or for testing changes before deploying them to a production environment
-4. Disk Encryption: LVM can be combined with disk encryption methods to encrypt logical volumes. This is sometimes easier and more flexible than encrypting physical partitions
-5. Performance Enhancement: Through striping, you can enhance the performance of the system by spreading data across multiple disks. This can result in higher data throughput compared to using a single disk
-6. Multiple Physical Devices Management: LVM allows you to manage multiple physical devices such as hard disks or SSDs as a single group of storage
-7. Replacing Disks: If you need to replace a disk, LVM makes the process much easier. You can move the logical volumes to a new disk and remove the old one without much hassle
+1. **Flexibility in Managing Storage**: With LVM, you can create logical partitions that can span across multiple physical disks. This is useful in situations where a partition might run out of space, and you need to add more without going through the hassle of reformatting disks.
+2.** Easy to Resize Partitions**: You can quickly and easily resize logical volumes, even while they are in use. This means that if a particular partition needs more or less space, you can resize it without any downtime
+3. **Snapshots**: LVM allows you to create snapshots of your logical volumes. This means that you can create an exact copy of a volume's contents at a particular point in time. This is extremely useful for backups or for testing changes before deploying them to a production environment
+4. **Disk Encryption**: LVM can be combined with disk encryption methods to encrypt logical volumes. This is sometimes easier and more flexible than encrypting physical partitions
+5. **Performance Enhancement**: Through striping, you can enhance the performance of the system by spreading data across multiple disks. This can result in higher data throughput compared to using a single disk
+6. **Multiple Physical Devices Management**: LVM allows you to manage multiple physical devices such as hard disks or SSDs as a single group of storage
+7. **Replacing Disks**: If you need to replace a disk, LVM makes the process much easier. You can move the logical volumes to a new disk and remove the old one without much hassle
 
 To sum it up, LVM provides a layer of abstraction between your operating system and the physical disks. This abstraction makes it much easier to manage disk space. If you run out of space on a logical volume, you can simply add a new disk to the volume group, and extend the logical volume to use this new space, without any need to move data around or repartition. This makes LVM a very powerful tool for managing disk space on Linux systems, particularly in environments where storage requirements change often.
 
@@ -53,14 +53,14 @@ SSH stands for Secure Shell. It is a cryptographic network protocol used for sec
 
 Here are the key aspects of SSH and reasons for its widespread use:
 
-1. Encryption: SSH encrypts data transmitted over the network. This means that even if the data is intercepted, it cannot be read without the encryption keys. This is crucial for protecting sensitive data and communications from eavesdropping
-2. Authentication: SSH uses public key cryptography for authenticating users and hosts. A user can prove their identity to an SSH server using a cryptographic key pair (public and private key). Additionally, the client can verify the identity of the SSH server, which protects against man-in-the-middle attacks
-3. Integrity: SSH ensures the integrity of the data being transmitted. It uses cryptographic hashes to make sure that the data hasn't been altered in transit. If the data is tampered with, the hashes will not match, and the recipient will know that the data has been compromised
-4. Confidentiality: By keeping the data encrypted, SSH ensures that sensitive information remains confidential. This is essential in scenarios where passwords or other confidential data need to be sent over the network
-5. Secure File Transfer: SSH includes the functionality for secure file transfer via protocols like SFTP (SSH File Transfer Protocol) or SCP (Secure Copy Protocol). This is often used for securely transferring files to and from remote servers
-6. Tunneling: SSH can be used to create a secure tunnel between machines through which data can be sent securely. This is often used for securely accessing network resources that might not be directly accessible over the internet.
-7. Remote Command Execution: SSH allows for executing commands on a remote server. This is especially useful for system administrators who need to manage servers without physically being at their location
-8. Port Forwarding: SSH can forward arbitrary TCP ports over the encrypted channel. This can be used for securely accessing services (like a database) on the remote machine which is not exposed to the internet
-9. Replacement for Insecure Protocols: Before SSH, protocols like Telnet and FTP were used for remote login and file transfers, respectively. However, these protocols transmit data, including passwords, in plaintext. SSH was developed as a secure alternative to these insecure protocols.
+1. **Encryption**: SSH encrypts data transmitted over the network. This means that even if the data is intercepted, it cannot be read without the encryption keys. This is crucial for protecting sensitive data and communications from eavesdropping
+2. **Authentication**: SSH uses public key cryptography for authenticating users and hosts. A user can prove their identity to an SSH server using a cryptographic key pair (public and private key). Additionally, the client can verify the identity of the SSH server, which protects against man-in-the-middle attacks
+3. **Integrity**: SSH ensures the integrity of the data being transmitted. It uses cryptographic hashes to make sure that the data hasn't been altered in transit. If the data is tampered with, the hashes will not match, and the recipient will know that the data has been compromised
+4. **Confidentiality**: By keeping the data encrypted, SSH ensures that sensitive information remains confidential. This is essential in scenarios where passwords or other confidential data need to be sent over the network
+5. **Secure File Transfer**: SSH includes the functionality for secure file transfer via protocols like SFTP (SSH File Transfer Protocol) or SCP (Secure Copy Protocol). This is often used for securely transferring files to and from remote servers
+6. **Tunneling**: SSH can be used to create a secure tunnel between machines through which data can be sent securely. This is often used for securely accessing network resources that might not be directly accessible over the internet.
+7. **Remote Command Execution**: SSH allows for executing commands on a remote server. This is especially useful for system administrators who need to manage servers without physically being at their location
+8. **Port Forwarding**: SSH can forward arbitrary TCP ports over the encrypted channel. This can be used for securely accessing services (like a database) on the remote machine which is not exposed to the internet
+9. **Replacement for Insecure Protocols**: Before SSH, protocols like Telnet and FTP were used for remote login and file transfers, respectively. However, these protocols transmit data, including passwords, in plaintext. SSH was developed as a secure alternative to these insecure protocols.
 
 In summary, SSH is an essential tool for secure communications and is widely used in a variety of applications including remote server management, secure file transfers, and creating secure communication channels over unsecured networks.
