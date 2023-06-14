@@ -172,6 +172,11 @@ usercheck = 1
 retry = 3
 enforce_for_root
 ```
+Change the passwords
+```
+sudo passwd root
+sudo passwd tzanchi
+```
 
 ## Create a monitoring script
 Write the `monitoring.sh` script and place it at `/usr/local/bin`
